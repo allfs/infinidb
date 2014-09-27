@@ -2021,6 +2021,7 @@ int ha_calpont_impl_create_(const char *name, TABLE *table_arg, HA_CREATE_INFO *
 	}
 
 	// @bug 3908. error out primary key for now.
+#if 0	
 	if (table_arg->key_info && table_arg->key_info->name && string(table_arg->key_info->name) == "PRIMARY")
 	{
 		rc = 1;
@@ -2031,7 +2032,7 @@ int ha_calpont_impl_create_(const char *name, TABLE *table_arg, HA_CREATE_INFO *
 		ci.isAlter = false;
 		return rc;
 	}
-
+#endif
 	int compressiontype = thd->variables.infinidb_compression_type;
 
 	if (compressiontype == 1) compressiontype = 2;
