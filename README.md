@@ -22,9 +22,7 @@ Along with a working C++ compiler and GNU software development tools you will ne
 
 ### InfiniDB MySQL
 
-    wget -Omysql-4.6.2-1.tar.gz https://github.com/infinidb/mysql/archive/4.6.2-1.tar.gz
-    tar -zxf mysql-4.6.2-1.tar.gz
-    ln -s mysql-4.6.2-1 mysql
+    git clone https://github.com/allfs/mysql-1 mysql
     cd mysql
     ./configure --prefix=$HOME/infinidb/mysql
     make
@@ -33,13 +31,14 @@ Along with a working C++ compiler and GNU software development tools you will ne
 ### InfiniDB
 
     cd ..
-    wget -Oinfinidb-4.6.2-1.tar.gz https://github.com/infinidb/infinidb/archive/4.6.2-1.tar.gz
-    tar -zxf infinidb-4.6.2-1.tar.gz
-    ln -s infinidb-4.6.2-1 infinidb
+    git clone https://github.com/allfs/infinidb
     cd infinidb
     ./configure --prefix=$HOME/infinidb
     make
     make install
+	
+### Setup production environment
+   ln -s $HOME/infinidb /usr/local/Calpont	
     
 This will leave you with `$HOME/infinidb` as a binary tree. Follow the Binary Download
 instructions in the InfiniDB 4.6 Installation Guide (available on http://www.infinidb.co/).
