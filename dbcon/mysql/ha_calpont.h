@@ -137,7 +137,7 @@ public:
     There is no need to implement ..._key_... methods if your engine doesn't
     support indexes.
    */
-  uint32_t max_supported_key_parts()     const { return 1; }
+  uint32_t max_supported_key_parts()     const { return 16; }
 
   /** @brief
     unireg.cc will call this to make sure that the storage engine can handle
