@@ -38,6 +38,7 @@ Along with a working C++ compiler and GNU software development tools you will ne
     make install
 	
 ### Setup production environment
+
    ln -s $HOME/infinidb /usr/local/Calpont	
     
 This will leave you with `$HOME/infinidb` as a binary tree. Follow the Binary Download
