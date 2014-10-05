@@ -56,12 +56,11 @@ class ha_calpont: public handler
 {
   THR_LOCK_DATA lock;      ///< MySQL lock
   INFINIDB_SHARE *share;    ///< Shared lock info
-
+  Table_flags int_table_flags;
 public:
   ha_calpont(handlerton *hton, TABLE_SHARE *table_arg);
-  ~ha_calpont()
-  {
-  }
+  ~ha_calpont();
+  ulonglong table_flags() const { return int_table_flags; }
 
   /** @brief
     The name that will be used for display purposes.
@@ -83,6 +82,7 @@ public:
     This is a list of flags that indicate what functionality the storage engine
     implements. The current table flags are documented in handler.h
   */
+#if 0
   ulonglong table_flags() const
   {
     /*
@@ -92,7 +92,7 @@ public:
     */
     return HA_BINLOG_STMT_CAPABLE;
   }
-
+#endif
   /** @brief
     This is a bitmap of flags that indicates how the storage engine
     implements indexes. The current index flags are documented in

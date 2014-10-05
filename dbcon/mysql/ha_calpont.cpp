@@ -313,7 +313,17 @@ static void calpont_set_error(THD* thd, uint64_t errCode, LEX_STRING* args, uint
 }
 
 ha_calpont::ha_calpont(handlerton *hton, TABLE_SHARE *table_arg)
-  :handler(hton, table_arg)
+  :handler(hton, table_arg),
+  int_table_flags(HA_REC_NOT_IN_SEQ |
+		  HA_NULL_IN_KEY |
+		  HA_CAN_INDEX_BLOBS |
+		  HA_CAN_SQL_HANDLER |
+		  HA_PRIMARY_KEY_REQUIRED_FOR_POSITION |
+		  HA_PRIMARY_KEY_IN_READ_INDEX |
+		  HA_BINLOG_ROW_CAPABLE |
+		  HA_CAN_GEOMETRY | HA_PARTIAL_COLUMN_READ |
+		  HA_TABLE_SCAN_ON_INDEX | HA_CAN_FULLTEXT /*|
+		  HA_CAN_FULLTEXT_EXT | HA_CAN_EXPORT*/)
 {}
 
 
