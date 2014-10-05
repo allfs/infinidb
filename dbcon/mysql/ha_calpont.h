@@ -144,7 +144,7 @@ public:
     There is no need to implement ..._key_... methods if your engine doesn't
     support indexes.
    */
-  uint32_t max_supported_key_length()    const { return 8; }
+  uint32_t max_supported_key_length()    const { return 1000; }
 
   /** @brief
     Called in test_quick_select to determine if indexes should be used.
