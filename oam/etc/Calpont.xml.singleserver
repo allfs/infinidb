@@ -475,7 +475,7 @@
 		<TotalUmMemory>25%</TotalUmMemory>
 		<TotalPmUmMemory>10%</TotalPmUmMemory>
 		<CPUniqueLimit>100</CPUniqueLimit>
-		<AllowDiskBasedJoin>N</AllowDiskBasedJoin>
+		<AllowDiskBasedJoin>Y</AllowDiskBasedJoin>
 		<!-- Be careful modifying TempFilePath!  On start, ExeMgr deletes
 			the entire directory and recreates it to make sure no
 			files are left behind.  -->
