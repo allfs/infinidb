@@ -59,7 +59,7 @@ class ha_calpont: public handler
   Table_flags int_table_flags;
 public:
   ha_calpont(handlerton *hton, TABLE_SHARE *table_arg);
-  ~ha_calpont();
+  ~ha_calpont() {};
   ulonglong table_flags() const { return int_table_flags; }
 
   /** @brief
