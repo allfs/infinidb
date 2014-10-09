@@ -4480,7 +4480,7 @@ int getSelectPlan(gp_walk_info& gwi, SELECT_LEX& select_lex, SCSEP& csep, bool i
 	
 	// ZZ - the followinig debug shows the structure of nested outer join. should
 	// use a recursive function.
-#ifdef OUTER_JOIN_DEBUG
+#ifdef OUTER_JOIN_DEBUG0
 
 	List<TABLE_LIST> *tables = &(select_lex.top_join_list);
 	List_iterator_fast<TABLE_LIST> ti(*tables);
