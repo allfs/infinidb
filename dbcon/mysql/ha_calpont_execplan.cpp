@@ -4055,14 +4055,14 @@ void parse_item (Item *item, vector<Item_field*>& field_vec, bool& hasNonSupport
 bool isInfiniDB(TABLE* table_ptr)
 {
 #if (defined(_MSC_VER) && defined(_DEBUG)) || defined(SAFE_MUTEX)
-	if (!(table_ptr->s && (*table_ptr->s->db_plugin)->name.str))
+	if (!(table_ptr->s && (table_ptr->s->db_plugin)->name.str))
 #else
 	if (!(table_ptr->s && (table_ptr->s->db_plugin)->name.str))
 #endif
 		return true;
 
 #if (defined(_MSC_VER) && defined(_DEBUG)) || defined(SAFE_MUTEX)
-	string engineName = (*table_ptr->s->db_plugin)->name.str;
+	string engineName = (table_ptr->s->db_plugin)->name.str;
 #else
 	string engineName = table_ptr->s->db_plugin->name.str;
 #endif
