@@ -25445,10 +25445,12 @@ if test "${with_debug+set}" = set; then
 
 fi;
 if test "x$with_debug" = "xyes"; then
-	idb_cxxflags='-ggdb3 -Wall -DSAFE_MUTEX -DINFINIDB_DEBUG'
+#	idb_cxxflags='-ggdb3 -Wall -DSAFE_MUTEX -DINFINIDB_DEBUG'
 
-	idb_cflags='-ggdb3 -Wall -DSAFE_MUTEX -DINFINIDB_DEBUG'
+#	idb_cflags='-ggdb3 -Wall -DSAFE_MUTEX -DINFINIDB_DEBUG'
 
+	idb_cxxflags='-ggdb3 -Wall -DSAFE_MUTEX'
+        idb_cflags='-ggdb3 -Wall -DSAFE_MUTEX -DINFINIDB_DEBUG'
 	echo "$as_me:$LINENO: result: yes" >&5
 echo "${ECHO_T}yes" >&6
 else
