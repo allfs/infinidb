@@ -1,4 +1,8 @@
 *~
+*.lo
+*.la
+Makefile
+net-snmp/*
 *.d
 *.d.*
 *.o
